@@ -3852,12 +3852,14 @@ returns argument #0.
 For more convenience and flexibility, you can also use the following pre-defined
 symbols in the body of `ACTION`:
 
-`argK_type`     | The type of the K-th (0-based) argument of the mock function
-:-------------- | :-----------------------------------------------------------
-`args`          | All arguments of the mock function as a tuple
-`args_type`     | The type of all arguments of the mock function as a tuple
-`return_type`   | The return type of the mock function
-`function_type` | The type of the mock function
+| Pre-defined Symbol | Description                                                   |
+| :----------------- | :------------------------------------------------------------ |
+| `argK`             | The value of the K-th (0-based) argument of the mock function |
+| `argK_type`        | The type of the K-th (0-based) argument of the mock function  |
+| `args`             | The value of all arguments of the mock function as a tuple    |
+| `args_type`        | The type of all arguments of the mock function as a tuple     |
+| `return_type`      | The return type of the mock function                          |
+| `function_type`    | The type of the mock function                                 |
 
 For example, when using an `ACTION` as a stub action for mock function:
 

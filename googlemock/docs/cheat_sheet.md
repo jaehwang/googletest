@@ -490,7 +490,7 @@ which must be a permanent callback.
 #### Returning a Value
 
 <!-- mdformat off(no multiline tables) -->
-|                             |                                               |
+| Action                      | Description                                   |
 | :-------------------------- | :-------------------------------------------- |
 | `Return()`                  | Return from a `void` mock function.           |
 | `Return(value)`             | Return `value`. If the type of `value` is     different to the mock function's return type, `value` is converted to the latter type <i>at the time the expectation is set</i>, not when the action is executed. |
@@ -505,7 +505,7 @@ which must be a permanent callback.
 #### Side Effects
 
 <!-- mdformat off(no multiline tables) -->
-|                                    |                                         |
+| Action                             | Description                             |
 | :--------------------------------- | :-------------------------------------- |
 | `Assign(&variable, value)` | Assign `value` to variable. |
 | `DeleteArg<N>()` | Delete the `N`-th (0-based) argument, which must be a pointer. |
@@ -525,7 +525,7 @@ In the following, by "callable" we mean a free function, `std::function`,
 functor, or lambda.
 
 <!-- mdformat off(no multiline tables) -->
-|                                     |                                        |
+| Action                              | Description                            |
 | :---------------------------------- | :------------------------------------- |
 | `f` | Invoke f with the arguments passed to the mock function, where f is a callable. |
 | `Invoke(f)` | Invoke `f` with the arguments passed to the mock function, where `f` can be a global/static function or a functor. |
@@ -576,7 +576,7 @@ value, and `foo` by reference.
 #### Default Action
 
 <!-- mdformat off(no multiline tables) -->
-| Matcher       | Description                                            |
+| Action        | Description                                            |
 | :------------ | :----------------------------------------------------- |
 | `DoDefault()` | Do the default action (specified by `ON_CALL()` or the built-in one). |
 <!-- mdformat on -->
@@ -589,7 +589,7 @@ composite action - trying to do so will result in a run-time error.
 #### Composite Actions
 
 <!-- mdformat off(no multiline tables) -->
-|                                |                                             |
+| Action                         | Description                                 |
 | :----------------------------- | :------------------------------------------ |
 | `DoAll(a1, a2, ..., an)`       | Do all actions `a1` to `an` and return the result of `an` in each invocation. The first `n - 1` sub-actions must return void. |
 | `IgnoreResult(a)`              | Perform action `a` and ignore its result. `a` must not return void. |
@@ -614,7 +614,7 @@ composite action - trying to do so will result in a run-time error.
 </table>
 
 <!-- mdformat off(no multiline tables) -->
-|                                    |                                         |
+| Action                             | Description                             |
 | :--------------------------------- | :-------------------------------------- |
 | `ACTION(Sum) { return arg0 + arg1; }` | Defines an action `Sum()` to return the sum of the mock function's argument #0 and #1. |
 | `ACTION_P(Plus, n) { return arg0 + n; }` | Defines an action `Plus(n)` to return the sum of the mock function's argument #0 and `n`. |
@@ -629,7 +629,7 @@ These are used in `Times()` to specify how many times a mock function will be
 called:
 
 <!-- mdformat off(no multiline tables) -->
-|                   |                                                        |
+| Cardinality       | Description                                            |
 | :---------------- | :----------------------------------------------------- |
 | `AnyNumber()`     | The function can be called any number of times.        |
 | `AtLeast(n)`      | The call is expected at least `n` times.               |
