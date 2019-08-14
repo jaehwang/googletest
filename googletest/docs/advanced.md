@@ -253,7 +253,7 @@ Fatal assertion                                  | Nonfatal assertion           
 ------------------------------------------------ | ------------------------------------------------ | --------
 `ASSERT_PRED_FORMAT1(pred_format1, val1);`       | `EXPECT_PRED_FORMAT1(pred_format1, val1);`       | `pred_format1(val1)` is successful
 `ASSERT_PRED_FORMAT2(pred_format2, val1, val2);` | `EXPECT_PRED_FORMAT2(pred_format2, val1, val2);` | `pred_format2(val1, val2)` is successful
-`...`                                            | `...`                                            | ...
+`...`                                            | `...`                                            | `...`
 
 The difference between this and the previous group of macros is that instead of
 a predicate, `(ASSERT|EXPECT)_PRED_FORMAT*` take a *predicate-formatter*
